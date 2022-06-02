@@ -48,6 +48,7 @@ function logOut($calls)
 function checkSessionExpired()
 {
     if (isset($_SESSION)) {
+
         $initTime = $_SESSION['initTime']; // What time did we started the session
         $duration = $_SESSION['duration']; // How much time do we want our session to stay active
         $currentTime = time();
