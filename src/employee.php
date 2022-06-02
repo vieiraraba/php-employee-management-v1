@@ -27,7 +27,7 @@ require_once("../assets/html/header.html");
 ?>
 
 <div class="d-flex flex-column align-items-center">
-    <form method="POST" action="" class="employee-form">
+    <form method="POST" action="" class="employee-form" autocomplete="off">
         <div class="form-row">
             <div>
                 <label for="name">Name</label>

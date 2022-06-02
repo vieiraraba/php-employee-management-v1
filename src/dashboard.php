@@ -17,48 +17,6 @@
 </head>
 
 <body>
-
-    <table class="table">
-
-		<thead class="thead-dark">
-			<tr>
-                <th>Gender</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Age</th>
-                <th>Email</th>
-                <th>City</th>
-                <th>Address</th>
-                <th>State</th>
-                <th>Postal Code</th>
-                <th>Phone Number</th>
-                <th>&nbsp;</th>
-			</tr>
-		</thead>
-
-    <?php
-        $data = file_get_contents("../resources/employees.json");
-        $employees = json_decode($data, true);
-        if(count($employees) != 0){
-            foreach ($employees as $employee) {
-                ?>
-                    <tr>
-                        <td> <?php echo $employee['gender']; ?> </td>
-                        <td> <?php echo $employee['name']; ?> </td>
-                        <td> <?php echo $employee['lastName']; ?> </td>
-                        <td> <?php echo $employee['age']; ?> </td>
-                        <td> <?php echo $employee['email']; ?> </td>
-                        <td> <?php echo $employee['city']; ?> </td>
-                        <td> <?php echo $employee['streetAddress']; ?> </td>
-                        <td> <?php echo $employee['state']; ?> </td>
-                        <td> <?php echo $employee['postalCode']; ?> </td>
-                        <td> <?php echo $employee['phoneNumber']; ?> </td>
-                    </tr>
-                <?php
-            }
-        }
-    ?>
-</table>
     <?php
 
     session_start();
@@ -71,6 +29,22 @@
     require_once("../assets/html/header.html");
 
     ?>
+
+    <div id="update-toast" class='update-toast toast align-items-center text-white bg-primary border-0 w-25 mx-auto my-5' role='alert' aria-live='assertive' aria-atomic='true'>
+        <div class='d-flex'>
+            <div class='toast-body'>
+                <span class='text-center'>Employee successfully updated.</span>
+            </div>
+        </div>
+    </div>
+    <div id="delete-toast" class='delete-toast toast align-items-center text-white bg-primary border-0 w-25 mx-auto my-5' role='alert' aria-live='assertive' aria-atomic='true'>
+        <div class='d-flex'>
+            <div class='toast-body'>
+                <span id='employee-deleted'>Employee successfully deleted.</span>
+            </div>
+        </div>
+    </div>
+    <div id="jsGrid" class="js-grid"></div>
 
 </body>
 

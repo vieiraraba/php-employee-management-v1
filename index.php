@@ -42,7 +42,7 @@ checkSessionToDashboard();
         <div class="login_form">
             <section class="login-wrapper">
 
-                <form id="login" method="post" action="./src/library/loginController.php">
+                <form id="login" method="post" action="./src/library/loginController.php" autocomplete="off">
 
                     <label for="username">User Name</label>
                     <input name="username" type="text" required />

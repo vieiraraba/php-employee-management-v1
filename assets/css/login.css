@@ -101,7 +101,14 @@ form input.password {
 }
 
 form input:focus {
-    border: 2px solid #1fd100;
+    border: 0.05rem solid #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #bc13fe,
+        0 0 0.8rem #bc13fe,
+        0 0 2.8rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe;
 }
 
 form button {
