@@ -6,13 +6,18 @@
 }
 
 body {
+    background-color: #262626 !important;
     margin: 0;
 }
+
+/*-------------- Header CSS --------------*/
+
+/*------- Navbar -------*/
 
 .navbar {
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     padding: 1.5rem;
     background-color: #000;
     color: #fff;
@@ -32,8 +37,6 @@ body {
     transition: 0.2s;
 }
 
-
-
 .link:hover {
     color: var(--glow-color);
     background: var(--base-color);
@@ -41,14 +44,10 @@ body {
     transition-delay: 1s;
 }
 
-
 .link span {
     position: absolute;
     display: block;
 }
-
-
-
 
 .link span:nth-child(1) {
     top: 0;
@@ -58,13 +57,10 @@ body {
     background: linear-gradient(90deg, transparent, var(--base-color));
 }
 
-
-
 .link:hover span:nth-child(1) {
     left: 100%;
     transition: 1s;
 }
-
 
 .link span:nth-child(3) {
     bottom: 0;
@@ -80,8 +76,6 @@ body {
     transition-delay: 0.5s;
 }
 
-
-
 .link span:nth-child(2) {
     top: -100%;
     right: 0;
@@ -95,8 +89,6 @@ body {
     transition: 1s;
     transition-delay: 0.25s;
 }
-
-
 
 .link span:nth-child(4) {
     bottom: -100%;
@@ -112,16 +104,54 @@ body {
     transition-delay: 0.75s;
 }
 
+/*------- Buttons -------*/
 
+/*--- Logo button ---*/
 
-.main-header__title {
-    font-size: 1.5rem;
+.logo-btn {
+    margin: 0;
+    background: transparent;
+    padding: 0;
+    border: none;
 }
 
-/* Log Out Button */
+.logo-btn {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255, 255, 255, 0.6);
+    --animation-color: #37FF8B;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+}
+
+.logo-btn:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+/*--- Log out button ---*/
 
 .logout-btn {
-    width: 12%;
+    width: 15%;
     position: relative;
     overflow: hidden;
     outline: none;
@@ -177,4 +207,153 @@ body {
 
 .logout-btn:hover .hover-btn {
     transform: translate(0%, 0%);
+}
+
+/*-------------- Employee CSS --------------*/
+
+/*------- Form -------*/
+
+form {
+    background: #000;
+    padding: 2em 2em;
+    font-family: helvetica, sans-serif;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+form label {
+    color: #fff;
+    font-family: helvetica, sans-serif;
+}
+
+.employee-form {
+    -webkit-box-flex: center;
+    -moz-box-flex: center;
+    -webkit-flex: center;
+    -ms-flex: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-align-items: center;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex: center;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 0px 0px 105px 15px rgba(191, 123, 255, 0.5);
+    -moz-box-shadow: 0px 0px 105px 15px rgba(191, 123, 255, 0.5);
+    box-shadow: 0px 0px 105px 15px rgba(191, 123, 255, 0.5);
+}
+
+
+.form-input {
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    gap: 1rem;
+    align-items: center;
+}
+
+/*------- Buttons -------*/
+
+.btn-container {
+    margin: 2rem auto;
+}
+
+.btn-submit,
+.btn-return {
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    transition: 0.5s;
+    position: relative;
+    font-size: 17px;
+    background: #333;
+    border: none;
+    color: #fff;
+}
+
+.btn-submit:hover,
+.btn-return:hover {
+    letter-spacing: 0.25em;
+    background: #37FF8B;
+    color: #37FF8B;
+    box-shadow: 0 0 45px #37FF8B;
+}
+
+.btn-submit::before,
+.btn-return::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #222222;
+}
+
+.btn-submit span,
+.btn-return span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-submit i,
+.btn-return i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+.btn-submit i::before,
+.btn-return i::before {
+    content: '';
+    position: absolute;
+    border: 2px solid #37FF8B;
+    width: 7px;
+    height: 4px;
+    top: -3.5px;
+    left: 80%;
+    background: #222222;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+.btn-submit:hover i::before,
+.btn-return:hover i::before {
+    width: 20px;
+    left: 20%;
+}
+
+.btn-submit i::after,
+.btn-return i::after {
+    content: '';
+    position: absolute;
+    border: 2px solid #37FF8B;
+    width: 7px;
+    height: 4px;
+    bottom: -3.5px;
+    left: 20%;
+    background: #222222;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+.btn-submit:hover i::after,
+.btn-return:hover i::after {
+    width: 20px;
+    left: 80%;
 }
