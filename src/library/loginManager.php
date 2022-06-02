@@ -1,8 +1,24 @@
 <?php
+function getUsers()
+{
+    $rawJSON = file_get_contents('../../resources/users.json');
+    $usersDB = json_decode($rawJSON, true);
+    return $usersDB;
+}
+
+function checkInputData($currentUser, $password)
+{
+    if (isset($currentUser) && password_verify($password, $currentUser['password'])) {
+        return true;
+    } elseif (isset($currentUser) && !password_verify($password, $currentUser['password'])) {
+        return "wrong-pass";
+    } elseif (!isset($currentUser)) {
+        return false;
+    }
+}
 
 function authUser($userData)
 {
-    // Checks if user in input exists in JSON DB (if it does creates session and goes to dashboard), and handles error cases
     session_start();
 
     $username = $userData['username'];
@@ -22,30 +38,10 @@ function authUser($userData)
         header("Location: ../../index.php?error=password");
     } elseif ($result) {
         $_SESSION["username"] = $currentUser['name'];
-        $_SESSION["duration"] = 6; // Time in seconds to session timeout; 600 = 10 minutes
+        $_SESSION["duration"] = 600;
         $_SESSION["initTime"] = time();
         header("Location: ../dashboard.php");
     } elseif (!$result) {
         header("Location: ../../index.php?error=unregistered");
-    }
-}
-
-function getUsers()
-{
-    // Returns a clean array from JSON users DB file
-    $rawJSON = file_get_contents('../../resources/users.json');
-    $usersDB = json_decode($rawJSON, true);
-    return $usersDB;
-}
-
-function checkInputData($currentUser, $password)
-{
-    // Matches input data with data in JSON DB, and returns key value to redirection
-    if (isset($currentUser) && password_verify($password, $currentUser['password'])) {
-        return true;
-    } elseif (isset($currentUser) && !password_verify($password, $currentUser['password'])) {
-        return "wrong-pass";
-    } elseif (!isset($currentUser)) {
-        return false;
     }
 }

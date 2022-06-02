@@ -2,7 +2,6 @@
 
 function checkSession()
 {
-    // We check if user has no session, and if so, we redirect to index
     if (!isset($_SESSION['username'])) {
         header("Location: ../index.php");
     }
@@ -10,7 +9,6 @@ function checkSession()
 
 function checkSessionToDashboard()
 {
-    // We check if user already is logged, and if so, we redirect to dashboard
     session_start();
     if (isset($_SESSION['username'])) {
         header("Location: ./src/dashboard.php");
