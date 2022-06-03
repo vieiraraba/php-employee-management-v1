@@ -102,18 +102,5 @@
         "state": "LU",
         "postalCode": 63281,
         "phoneNumber": 91232876454
-    },
-    {
-        "id": 8,
-        "name": "Robert",
-        "lastName": "Thomson",
-        "email": "jackon@network.com",
-        "gender": "man",
-        "age": 24,
-        "streetAddress": 126,
-        "city": "New Orleans",
-        "state": "LU",
-        "postalCode": 63281,
-        "phoneNumber": 91232876454
     }
 ]

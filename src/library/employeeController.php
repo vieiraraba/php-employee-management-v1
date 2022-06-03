@@ -9,8 +9,10 @@ switch ($_SERVER["REQUEST_METHOD"]) {
     case 'PUT':
 
         break;
-    case "DELETE":
-
+    case 'DELETE':
+        // Get the database connection file
+        parse_str(file_get_contents("php://input"), $delete_vars);
+        deleteEmployee($delete_vars["id"]);
         break;
     default:
         break;
