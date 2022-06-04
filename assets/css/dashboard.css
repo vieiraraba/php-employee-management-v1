@@ -1,0 +1,109 @@
+/*------------------------------ Table ------------------------------*/
+
+.js-grid {
+    display: block;
+    margin: auto;
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    box-shadow: 0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #bc13fe,
+        0 0 0.8rem #bc13fe,
+        0 0 2.8rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe;
+}
+
+.jsgrid-grid-header,
+.jsgrid-grid-body {
+    overflow: auto !important;
+}
+
+.table-header {
+    padding: 0.5rem;
+    height: 3rem;
+    color: var(--glow-color-green);
+    text-shadow: 0 0 .5em var(--glow-color-green);
+    background-color: #010a01 !important;
+    border: 1px solid var(--base-color) !important;
+}
+
+.table-row {
+    color: #fff;
+    background-color: #010a01 !important;
+    border: 1px solid var(--base-color) !important;
+}
+
+/*------------------------------ Pager ------------------------------*/
+
+.jsgrid-pager {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    border-radius: .25rem;
+}
+
+.jsgrid-pager-page,
+.jsgrid-pager-nav-button {
+    position: relative;
+    display: block;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #ffffff;
+    background-color: #010a01;
+}
+
+.jsgrid-pager span:first-child {
+    margin-left: 0 !important;
+    border-top-left-radius: .25rem !important;
+    border-bottom-left-radius: .25rem !important;
+}
+
+.jsgrid-pager span:last-child {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+.jsgrid-pager-nav-inactive-button {
+    display: block !important;
+    pointer-events: auto !important;
+}
+
+.jsgrid-pager-nav-inactive-button a {
+    color: #fff !important;
+}
+
+.jsgrid-pager-page:hover,
+.jsgrid-pager-nav-button:hover {
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--base-color);
+    border-color: #dee2e6
+}
+
+.jsgrid-pager-page:focus,
+.jsgrid-pager-nav-button:focus {
+    z-index: 2;
+    outline: 0;
+    box-shadow: 0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem var(--base-color-green),
+        0 0 0.8rem var(--base-color-green),
+        0 0 2.8rem var(--base-color-green),
+        inset 0 0 1.3rem var(--base-color-green);
+}
+
+.jsgrid-pager-current-page {
+    font-weight: 400 !important;
+    cursor: pointer !important;
+    z-index: 1;
+    color: #000;
+    background-color: var(--base-color-green);
+    border-color: var(--base-color-green);
+}
+
+.jsgrid-pager-current-page:hover {
+    color: #000;
+    background-color: var(--glow-color-green);
+    border-color: var(--glow-color-green);
+}

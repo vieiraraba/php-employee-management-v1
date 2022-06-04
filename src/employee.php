@@ -83,7 +83,7 @@ require_once("../assets/html/header.html");
             </div>
         </div>
         <div class="btn-container">
-            <button type="submit" data-text="Awesome" class="btn-submit">
+            <button type="submit" class="btn-submit">
                 <span>Submit</span><i></i>
             </button>
             <a href="./dashboard.php" class="btn-return">
@@ -92,6 +92,10 @@ require_once("../assets/html/header.html");
         </div>
 </div>
 </form>
+</div>
+
+<div class="quote">
+    “There are two ways to write error-free programs; only the third works.”
 </div>
 
 </html>

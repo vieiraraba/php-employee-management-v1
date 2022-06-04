@@ -21,42 +21,60 @@ checkSessionToDashboard();
 </head>
 
 <body>
+    <header>
+        <h1 class="h1Neon">Employees Manager</h1>
+    </header>
 
-    <div class="mt-5 d-flex flex-column justify-content-center align-items-center">
-        <?php
-        if (isset($_GET['status']) && $_GET['status'] === "loggedOut") {
-            echo "<div class='error'>Successfully logged out, we hope to see you again soon</div>";
-        } elseif (isset($_GET['status']) && $_GET['status'] === "sessionTimeOut") {
-            echo "<div class='error'>Sorry, your session expired, please login again</div>";
-        }
+    <section class="mt-5 d-flex flex-column justify-content-center align-items-center">
 
-        if (isset($_GET['error'])) {
-            if ($_GET['error'] === "password") {
-                echo '<div class="error">The password is incorrect, try again</div>';
-            } elseif ($_GET['error'] === "unregistered") {
-                echo '<div class="error">The user is not registered</div>';
-            }
-        }
-        ?>
-
-        <div class="login_form">
+        <div class="login-form">
             <section class="login-wrapper">
 
                 <form id="login" method="post" action="./src/library/loginController.php" autocomplete="off">
 
                     <label for="username">User Name</label>
-                    <input name="username" type="text" required />
+                    <input class="username" name="username" type="text" required />
+                    <i class="fa fa-user" aria-hidden="true"></i>
 
                     <label for="password">Password</label>
                     <input id="password" class="password" name="password" type="password" required />
                     <i id="togglePassword" class="far fa-eye"></i>
+
                     <button type="submit">Sign In</button>
+                    <?php
+                    if (isset($_GET['status']) && $_GET['status'] === "loggedOut") {
+                        echo "<div class='error'>Successfully logged out, we hope to see you again soon</div>";
+                    } elseif (isset($_GET['status']) && $_GET['status'] === "sessionTimeOut") {
+                        echo "<div class='error'>Sorry, your session expired, please login again</div>";
+                    }
+
+                    if (isset($_GET['error'])) {
+                        if ($_GET['error'] === "password") {
+                            echo '<div class="error">The password is incorrect, try again</div>';
+                        } elseif ($_GET['error'] === "unregistered") {
+                            echo '<div class="error">The user is not registered</div>';
+                        }
+                    }
+                    ?>
                 </form>
 
             </section>
         </div>
+    </section>
+
+    <div class="quote">
+        <p>
+            “ Code is like humor. When you have to explain it, it’s bad.”
+            <br>
+            - Cory House
+        </p>
     </div>
 
+    <section class="animated-background">
+        <div id="stars1"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </section>
 </body>
 
 </html>
