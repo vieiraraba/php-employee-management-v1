@@ -2,7 +2,6 @@
 @import url(./header.css);
 @import url(./dashboard.css);
 @import url(./employees.css);
-@import url(./toggleSwitch.css);
 
 :root {
     --glow-color: rgb(217, 176, 255);

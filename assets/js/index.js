@@ -114,7 +114,7 @@ $("#jsGrid").jsGrid({
             type: "text",
             headercss: "table-header",
             css: "table-row",
-            width: 20,
+            width: 25,
         },
         {
             name: "city",
@@ -156,8 +156,8 @@ $("#jsGrid").jsGrid({
         },
     ],
     /* Redirects to the employee page with the employee's data. */
-    rowClick: function (args) {
-        location.href = "./employee.php?employee=" + args.item.id;
+    rowClick: function (e) {
+        location.href = "./employee.php?employee=" + e.item.id;
     },
     /* Redirects to the employee page with the employee's data. */
     onItemUpdated: function () {
@@ -165,7 +165,7 @@ $("#jsGrid").jsGrid({
         toast.classList.remove("toast");
         setTimeout(() => {
             toast.classList.add("toast");
-        }, 5000);
+        }, 3000);
     },
     /* Displays a message when deleting employee data */
     onItemDeleted: function () {
@@ -173,9 +173,24 @@ $("#jsGrid").jsGrid({
         toast.classList.remove("toast");
         setTimeout(() => {
             toast.classList.add("toast");
-        }, 5000);
+        }, 3000);
     },
 });
 
 /* Hide the id field */
 $("#jsGrid").jsGrid("fieldOption", "id", "visible", false);
+
+const editBtn = document.getElementById("editBtn");
+editBtn.addEventListener("click", successUpdate());
+
+/* Function to display a message when updating employee data */
+function successUpdate() {
+    const div = document.getElementById("success");
+    if (div) {
+        let success = "<b>Success!</b> Employee added successfully";
+        div.innerHTML = success;
+        setTimeout(() => {
+            div.remove();
+        }, 3000);
+    }
+}
