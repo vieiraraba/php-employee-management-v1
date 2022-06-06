@@ -1,3 +1,6 @@
+@import url(./background.css);
+@import url(./loginForm.css);
+
 :root {
     --glow-color: rgb(217, 176, 255);
     --glow-spread-color: rgba(191, 123, 255, 0.781);
@@ -12,19 +15,43 @@
     box-sizing: border-box;
 }
 
-body,
-html,
-.login_form {
-    height: 100%;
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at bottom, #223344 0, #090a0f 100%);
+    opacity: 0;
+    animation: 1s ease-out .3s 1 transitionAnimation;
+    animation-fill-mode: forwards
 }
 
-body {
-    background: #262626;
+.h1Neon {
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.2em;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    font-size: 4rem;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #bc13fe,
+        0 0 82px #bc13fe,
+        0 0 92px #bc13fe,
+        0 0 102px #bc13fe,
+        0 0 151px #bc13fe;
 }
 
 .error {
-    position: relative;
+    width: 300px;
+    margin-top: 12px;
+    margin-left: 15.5%;
     padding: 0.5em;
+    position: relative;
+    text-align: center;
     background: #000;
     color: #fff;
     -webkit-box-shadow: 0px 0px 30px 1px rgba(191, 123, 255, 0.5);
@@ -32,130 +59,21 @@ body {
     box-shadow: 0px 0px 30px 1px rgba(191, 123, 255, 0.5);
 }
 
-.login_form {
-    margin-top: 5%;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-flex: center;
-    -moz-box-flex: center;
-    -webkit-flex: center;
-    -ms-flex: center;
-    flex: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    justify-content: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-box-shadow: 0px 0px 105px 15px rgba(191, 123, 255, 0.5);
-    -moz-box-shadow: 0px 0px 105px 15px rgba(191, 123, 255, 0.5);
-    box-shadow: 0px 0px 105px 15px rgba(191, 123, 255, 0.5);
-}
-
-.login-wrapper {
-    max-width: 500px;
-    width: 100%;
-}
-
-form {
-    background: #000;
-    padding: 2em 2em;
-    font-family: helvetica, sans-serif;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-}
-
-form label {
-    color: #fff;
-    margin: 0 3% 0.25em;
-    display: block;
-    font-family: helvetica, sans-serif;
-}
-
-form input {
-
-    width: 94%;
-    margin-left: 3%;
-    padding: 0.5em 0.25em;
-    font-size: 1.2em;
-    border: 2px solid #000;
-    outline: none;
-    -webkit-transition: all 0.25s;
-    -moz-transition: all 0.25s;
-    -ms-transition: all 0.25s;
-    -o-transition: all 0.25s;
-    transition: all 0.25s;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-}
-
-form input.password {
-    padding-right: 4rem;
-}
-
-form input:focus {
-    border: 2px solid #1fd100;
-}
-
-form button {
-    --glow-color: rgb(217, 176, 255);
-    --glow-spread-color: rgba(191, 123, 255, 0.781);
-    --enhanced-glow-color: rgb(231, 206, 255);
-    --btn-color: rgb(100, 61, 136);
-    width: 65%;
-    margin: 2em 17.5% 0;
-    border: .25em solid var(--glow-color);
-    padding: 1em 3em;
-    color: var(--glow-color);
-    font-size: 15px;
-    font-weight: bold;
-    background-color: var(--btn-color);
-    border-radius: 1em;
-    outline: none;
-    box-shadow: 0 0 1em .25em var(--glow-color),
-        0 0 4em 1em var(--glow-spread-color),
-        inset 0 0 .75em .25em var(--glow-color);
-    text-shadow: 0 0 .5em var(--glow-color);
+.quote {
+    margin-top: 2%;
     position: relative;
-    transition: all 0.3s;
-}
-
-form button::after {
-    pointer-events: none;
-    content: "";
-    position: absolute;
-    top: 120%;
-    left: 0;
-    height: 100%;
+    padding-bottom: 20px;
+    color: #E6E6E6;
+    font-size: 1rem;
+    display: block;
     width: 100%;
-    background-color: var(--glow-spread-color);
-    filter: blur(2em);
-    opacity: .7;
-    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
-}
-
-form button:hover {
-    color: var(--btn-color);
-    background-color: var(--glow-color);
-    box-shadow: 0 0 1em .25em var(--glow-color),
-        0 0 4em 2em var(--glow-spread-color),
-        inset 0 0 .75em .25em var(--glow-color);
-}
-
-form button:active {
-    box-shadow: 0 0 0.6em .25em var(--glow-color),
-        0 0 2.5em 2em var(--glow-spread-color),
-        inset 0 0 .5em .25em var(--glow-color);
-}
-
-i {
-    margin-left: -30px;
-    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(90deg, #223344, #E6E6E6, #223344);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 5s linear .3s infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

@@ -5,25 +5,25 @@
         "lastName": "Lei",
         "email": "jackon@network.com",
         "gender": "man",
-        "city": "San Jone",
-        "streetAddress": "126",
+        "city": "San",
+        "streetAddress": 126,
         "state": "CA",
-        "age": "24",
-        "postalCode": "394221",
-        "phoneNumber": "7383627627"
+        "age": 24,
+        "postalCode": 394221,
+        "phoneNumber": 7383627627
     },
     {
-        "id": "2",
+        "id": 2,
         "name": "John",
         "lastName": "Doe",
         "email": "jhondoe@foo.com",
         "gender": "man",
         "city": "New York",
-        "streetAddress": "89",
+        "streetAddress": 89,
         "state": "WA",
         "age": "34",
-        "postalCode": "09889",
-        "phoneNumber": "1283645645"
+        "postalCode": 9889,
+        "phoneNumber": 1283645645
     },
     {
         "id": 3,
@@ -32,11 +32,11 @@
         "email": "mills@leila.com",
         "gender": "woman",
         "city": "San Diego",
-        "streetAddress": "55",
+        "streetAddress": 55,
         "state": "CA",
-        "age": "29",
-        "postalCode": "098765",
-        "phoneNumber": "9983632461"
+        "age": 29,
+        "postalCode": 98765,
+        "phoneNumber": 9983632461
     },
     {
         "id": 4,
@@ -45,11 +45,11 @@
         "email": "dismond@foo.com",
         "gender": "man",
         "age": 30,
-        "streetAddress": "90",
+        "streetAddress": 90,
         "city": "Salt lake city",
         "state": "UT",
-        "postalCode": "457320",
-        "phoneNumber": "90876987654"
+        "postalCode": 457320,
+        "phoneNumber": 90876987654
     },
     {
         "id": 5,
@@ -58,11 +58,11 @@
         "email": "susanmith@baz.com",
         "gender": "woman",
         "age": 28,
-        "streetAddress": "43",
+        "streetAddress": 43,
         "city": "Louisville",
         "state": "KNT",
-        "postalCode": "445321",
-        "phoneNumber": "224355488976"
+        "postalCode": 445321,
+        "phoneNumber": 224355488976
     },
     {
         "id": 6,
@@ -71,11 +71,11 @@
         "email": "brad@foo.com",
         "gender": "man",
         "age": 40,
-        "streetAddress": "128",
+        "streetAddress": 128,
         "city": "Atlanta",
         "state": "GEO",
-        "postalCode": "394221",
-        "phoneNumber": "6854634522"
+        "postalCode": 394221,
+        "phoneNumber": 6854634522
     },
     {
         "id": 7,
@@ -84,23 +84,127 @@
         "email": "walkerneil@baz.com",
         "gender": "man",
         "age": 42,
-        "streetAddress": "1",
+        "streetAddress": 1,
         "city": "Nashville",
         "state": "TN",
         "postalCode": 90143,
-        "phoneNumber": "45372788192"
+        "phoneNumber": 45372788192
     },
     {
-        "id": "8",
+        "id": 8,
         "name": "Robert",
         "lastName": "Thomson",
         "email": "jackon@network.com",
         "gender": "man",
         "age": 24,
-        "streetAddress": "126",
+        "streetAddress": 126,
         "city": "New Orleans",
         "state": "LU",
         "postalCode": 63281,
-        "phoneNumber": "91232876454"
+        "phoneNumber": 91232876454
+    },
+    {
+        "id": 9,
+        "name": "Phoebe",
+        "lastName": "Quitzon",
+        "email": "phoebe@network.com",
+        "gender": "man",
+        "city": "San",
+        "streetAddress": 126,
+        "state": "CA",
+        "age": 24,
+        "postalCode": 394221,
+        "phoneNumber": 7383627627
+    },
+    {
+        "id": 10,
+        "name": "David",
+        "lastName": "Treutel",
+        "email": "david@foo.com",
+        "gender": "man",
+        "city": "New York",
+        "streetAddress": 89,
+        "state": "WA",
+        "age": "34",
+        "postalCode": 9889,
+        "phoneNumber": 1283645645
+    },
+    {
+        "id": 11,
+        "name": "Tobin",
+        "lastName": "Green",
+        "email": "tobin@green.com",
+        "gender": "woman",
+        "city": "San Diego",
+        "streetAddress": 55,
+        "state": "CA",
+        "age": 29,
+        "postalCode": 98765,
+        "phoneNumber": 9983632461
+    },
+    {
+        "id": 12,
+        "name": "Wendell",
+        "lastName": "Langosh",
+        "email": "wendell@foo.com",
+        "gender": "man",
+        "age": 30,
+        "streetAddress": 90,
+        "city": "Salt lake city",
+        "state": "UT",
+        "postalCode": 457320,
+        "phoneNumber": 90876987654
+    },
+    {
+        "id": 13,
+        "name": "Darryl",
+        "lastName": "Buckridge",
+        "email": "darryl@baz.com",
+        "gender": "woman",
+        "age": 28,
+        "streetAddress": 43,
+        "city": "Louisville",
+        "state": "KNT",
+        "postalCode": 445321,
+        "phoneNumber": 224355488976
+    },
+    {
+        "id": 14,
+        "name": "Howard",
+        "lastName": "Bruen",
+        "email": "howard@foo.com",
+        "gender": "man",
+        "age": 40,
+        "streetAddress": 128,
+        "city": "Atlanta",
+        "state": "GEO",
+        "postalCode": 394221,
+        "phoneNumber": 6854634522
+    },
+    {
+        "id": 15,
+        "name": "Robb",
+        "lastName": "Bernhard",
+        "email": "robb@baz.com",
+        "gender": "man",
+        "age": 42,
+        "streetAddress": 1,
+        "city": "Nashville",
+        "state": "TN",
+        "postalCode": 90143,
+        "phoneNumber": 45372788192
+    },
+    {
+        "id": 16,
+        "name": "Lavinia",
+        "lastName": "Hettinger",
+        "email": "lavinia@network.com",
+        "gender": "man",
+        "age": 24,
+        "streetAddress": 126,
+        "city": "New Orleans",
+        "state": "LU",
+        "postalCode": 63281,
+        "phoneNumber": 91232876454
     }
 ]

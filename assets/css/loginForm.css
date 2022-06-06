@@ -1,0 +1,128 @@
+form {
+    padding: 1.2em 2em;
+    padding-bottom: .8em;
+    font-family: helvetica, sans-serif;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+form label {
+    color: #fff;
+    margin: 0 3% 0.25em;
+    display: block;
+    font-family: helvetica, sans-serif;
+}
+
+form input {
+    color: #fff;
+    background-color: #223344;
+    width: 94%;
+    margin-left: 3%;
+    padding: 0.5em 0.25em;
+    font-size: 1.2em;
+    border: 2px solid #000;
+    outline: none;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 20px;
+}
+
+form input.password {
+    padding-right: 2rem;
+}
+
+form input.username {
+    padding-right: 2rem;
+}
+
+form input:focus {
+    border: 0.05rem solid #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #bc13fe,
+        0 0 0.8rem #bc13fe,
+        0 0 2.8rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe;
+}
+
+form button {
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    width: 65%;
+    margin: 2em 17.5% 0;
+    padding: 1em 3em;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #223344;
+    border-radius: 1em;
+    outline: none;
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+}
+
+form button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+form button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    border: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+}
+
+form button:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+
+.login-form {
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    box-shadow: 0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #bc13fe,
+        0 0 0.8rem #bc13fe,
+        0 0 2.8rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe;
+}
+
+.login-wrapper {
+    max-width: 500px;
+    width: 100%;
+}
+
+.fa-eye {
+    color: #fff;
+    margin-left: -30px;
+    cursor: pointer;
+}
+
+.fa-user {
+    color: #fff;
+    margin-left: -30px;
+}
