@@ -156,8 +156,8 @@ $("#jsGrid").jsGrid({
         },
     ],
     /* Redirects to the employee page with the employee's data. */
-    rowClick: function (e) {
-        location.href = "./employee.php?employee=" + e.item.id;
+    rowClick: function (employeeId) {
+        location.href = "./employee.php?employee=" + employeeId.item.id;
     },
     /* Redirects to the employee page with the employee's data. */
     onItemUpdated: function () {

@@ -54,7 +54,7 @@ require_once("../assets/html/header.html");
 
     <form method="POST" action="./library/employeeController.php" class="employee-form" autocomplete="off">
         <div class="form-row">
-            <input type="hidden" name="id" id="id" class="d-none" value=<?= $currentEmployee["id"] ?>>
+            <input type="hidden" name="id" id="id" class="d-none" value=<?= isset($_GET['employee']) ? $currentEmployee["id"] : "" ?>>
             <input type="hidden" name="avatar-field" id="avatar-field" class="d-none">
             <div>
                 <label for="name">Name</label>
@@ -62,7 +62,7 @@ require_once("../assets/html/header.html");
             </div>
             <div>
                 <label for="last-name">Last Name</label>
-                <input class="form-input" type="text" name="lastName" id="lastName" required value=<?= isset($_GET['employee']) ? $currentEmployee["lastName"] : "" ?>>
+                <input class="form-input" type="text" name="lastName" id="lastName" required value=<?= isset($currentEmployee["lastName"]) ? $currentEmployee["lastName"] : "" ?>>
             </div>
         </div>
         <div class="form-row">
@@ -73,8 +73,8 @@ require_once("../assets/html/header.html");
             <div>
                 <label for="gender">Gender</label>
                 <select class="form-input" name="gender" id="gender">
-                    <option selected><?= isset($_GET['employee']) ? ucfirst($currentEmployee["gender"]) : "" ?></option>
-                    <option>Man</option>
+                    <option><?= isset($_GET['employee']) ? ucfirst($currentEmployee["gender"]) : "" ?></option>
+                    <option <?= isset($_GET['employee']) ? "" : "selected" ?>>Man</option>
                     <option>Woman</option>
                 </select>
             </div>
